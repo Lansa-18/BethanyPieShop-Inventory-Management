@@ -1,5 +1,7 @@
-﻿using BethanysPieShop.InventoryManagement.Domain.General;
-using BethanysPieShop.InventoryManagement.Domain.ProductManagement;
+﻿using BethanyPieShop.InventoryManagement;
+using BethanyPieShop.InventoryManagement.Domain.General;
+using BethanyPieShop.InventoryManagement.Domain.ProductManagement;
+
 
 PrintWelcome();
 
@@ -10,7 +12,8 @@ Product p1 = new Product(1, "Sugar", "Lorem Ipsum", samplePrice, UnitType.PerKg,
 p1.IncreaseStock();
 p1.Description = "Sample description";
 
-var p2 = new Product(2, "Cake decorations", "Lorem Ipsum", )
+var p2 = new Product(2, "Cake decorations", "Lorem ipsum", samplePrice, UnitType.PerItem, 20);
+Product p3 = new (3, "Strawberry", "Lorem ipsum", samplePrice, UnitType.PerBox, 10);
 
 
 #region Layout
