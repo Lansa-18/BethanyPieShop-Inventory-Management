@@ -16,7 +16,7 @@ var p2 = new Product(2, "Cake decorations", "Lorem ipsum", samplePrice, UnitType
 Product p3 = new (3, "Strawberry", "Lorem ipsum", samplePrice, UnitType.PerBox, 10);
 
 
-// #region Layout
+#region Layout
 
 static void PrintWelcome()
 {
@@ -47,4 +47,4 @@ static void PrintWelcome()
 
     Console.Clear();
 }
-// #endregion
+#endregion
