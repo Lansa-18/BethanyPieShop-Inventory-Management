@@ -5,6 +5,9 @@ using BethanyPieShop.InventoryManagement.Domain.ProductManagement;
 
 PrintWelcome();
 
+Product.ChangeStockThreshold(10);
+
+
 //Create inventory
 Price samplePrice = new Price(10, Currency.Euro);
 Product p1 = new Product(1, "Sugar", "Lorem Ipsum", samplePrice, UnitType.PerKg, 100);

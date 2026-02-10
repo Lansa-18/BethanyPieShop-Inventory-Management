@@ -105,7 +105,7 @@ public partial class Product
             Log($"{CreateSimpleProductRepresentation} stock overflow. {newStock - AmountInStock} item(s) ordered that couldn't be stored.");
         }
 
-        if (AmountInStock > 10)
+        if (AmountInStock > StockThreshold)
         {
             IsBelowStockThreshold = false;
         }

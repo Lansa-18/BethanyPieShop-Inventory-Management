@@ -1,12 +1,23 @@
 using System;
+using System.Net;
 
 namespace BethanyPieShop.InventoryManagement.Domain.ProductManagement;
 
 public partial class Product
 {
-    private void UpdateLowStock()
+    public static int StockThreshold = 5;
+
+    public static void ChangeStockThreshold(int newStockThreshold)
     {
-        if (AmountInStock < 10) // Using a fixed value for now
+        // We will only allow this to go through if the value is >= 0
+        if (newStockThreshold > 0)
+        {
+            StockThreshold = newStockThreshold;
+        }
+    }
+    public void UpdateLowStock()
+    {
+        if (AmountInStock < StockThreshold) // Using a fixed value for now
         {
             IsBelowStockThreshold = true;
         }
