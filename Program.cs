@@ -1,22 +1,11 @@
 ﻿using BethanyPieShop.InventoryManagement;
-using BethanyPieShop.InventoryManagement.Domain.General;
-using BethanyPieShop.InventoryManagement.Domain.ProductManagement;
-
 
 PrintWelcome();
 
-Product.ChangeStockThreshold(10);
-
-
-//Create inventory
-Price samplePrice = new Price(10, Currency.Euro);
-Product p1 = new Product(1, "Sugar", "Lorem Ipsum", samplePrice, UnitType.PerKg, 100);
-
-p1.IncreaseStock();
-p1.Description = "Sample description";
-
-var p2 = new Product(2, "Cake decorations", "Lorem ipsum", samplePrice, UnitType.PerItem, 20);
-Product p3 = new (3, "Strawberry", "Lorem ipsum", samplePrice, UnitType.PerBox, 10);
+Utilities.InitializeStock();
+Utilities.ShowMainMenu();
+Console.WriteLine("Application shutting down...");
+Console.ReadLine();
 
 
 #region Layout

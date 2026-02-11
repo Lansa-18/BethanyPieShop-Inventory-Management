@@ -301,11 +301,6 @@ internal class Utilities
 						AmountOrdered = amountOrdered
 					};
 
-					//OrderItem orderItem = new OrderItem();
-					//orderItem.ProductId = selectedProduct.Id;
-					//orderItem.ProductName = selectedProduct.Name;
-					//orderItem.AmountOrdered = amountOrdered;
-
 					newOrder.OrderItems.Add(orderItem);
 				}
 			}

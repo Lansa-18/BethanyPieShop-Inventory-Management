@@ -17,7 +17,7 @@ public partial class Product
     }
     public void UpdateLowStock()
     {
-        if (AmountInStock < StockThreshold) // Using a fixed value for now
+        if (AmountInStock < StockThreshold)
         {
             IsBelowStockThreshold = true;
         }
